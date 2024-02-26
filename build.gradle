@@ -1,0 +1,89 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.3'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// 리액트 연동을 위한 설정
+// 프론트엔드 소스 코드가 있는 디렉토리 정의
+def frontendDir = "$projectDir/src/main/front"
+
+// 프로젝트의 소스 세트 구성 > 리소스 디렉토리 정의
+sourceSets {
+    main {
+        resources { srcDirs = ["$projectDir/src/main/resources"]
+        }
+    }
+}
+
+// React 애플리케이션을 빌드하는데 사용되는 태스크
+task buildReact(type: Exec) {
+    dependsOn "installReact"
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "run-script", "build"
+    } else {
+        commandLine "npm", "run-script", "build"
+    }
+}
+
+
+// copyReactBuildFiles 태스크에 의존하도록 설정,
+// 이는 리소스가 처리되기 전에 React 빌드 파일이 복사되어야 함을 의미
+//processResources { dependsOn "copyReactBuildFiles" }
+
+// React 빌드 파일을 복사하는 태스크, buildReact에 의존
+// 해당빌드를 복사
+//task copyReactBuildFiles(type: Copy) {
+//    dependsOn "buildReact"
+//    from "$frontendDir/build"
+//    into "$projectDir/src/main/resources/static"
+//}
+
+// React 애플리케이션을 설치하는데 사용되는 태스크
+// npm을 사용하여 종속성을 설치하고 보안 문제를 해결
+//task installReact(type: Exec) {
+//    workingDir "$frontendDir"
+//    inputs.dir "$frontendDir"
+//    group = BasePlugin.BUILD_GROUP
+//    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+//        commandLine "npm.cmd", "audit", "fix"
+//        commandLine 'npm.cmd', 'install' }
+//    else {
+//        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
+//    }
+//}
+
+
+
