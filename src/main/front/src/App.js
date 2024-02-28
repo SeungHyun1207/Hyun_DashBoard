@@ -5,7 +5,7 @@ import './css/portal/commons/commons.scss';
  *  @작성자 강승현
  *  @작성일
  */
-function App() {
+function HyunDashBoard() {
 
   return (
     <div className="App">
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default HyunDashBoard;
