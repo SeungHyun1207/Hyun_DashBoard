@@ -28,15 +28,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  *  Fallback 경로: <Routes> 컴포넌트 안에 <Route> 컴포넌트를 사용하여 Fallback 경로를 설정할 수 있습니다. 이는 모든 경로에 일치하지 않을 때 렌더링됩니다.
  */
 root.render(
-  <React.StrictMode>
-      <BrowserRouter>
-          <Routes>
-              <Route>
-                  <App />
-              </Route>
-          </Routes>
-      </BrowserRouter>
-  </React.StrictMode>
+    <App />
+  // <React.StrictMode>
+  //     <BrowserRouter>
+  //         <Routes>
+  //             <Route>
+  //
+  //             </Route>
+  //         </Routes>
+  //     </BrowserRouter>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
