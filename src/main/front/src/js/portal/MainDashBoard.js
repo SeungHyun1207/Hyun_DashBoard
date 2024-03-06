@@ -3,7 +3,11 @@ import Sidebar from "./commons/Sidebar";
 import Header from "./commons/Header";
 
 /**
- *  @author 강승현
+ *  작성자 	: 강승현
+ *  작성일 	: 2024-03-04
+ *  파라미터	: Long ntcNo
+ *  리턴값 	: 공지사항 상세 정보
+ *  내용 	: 공지사항의 No를 전달 하여 해당 공지사항의 상세 정보를 가져 온다.
  */
 function MainDashBoard(){
 
