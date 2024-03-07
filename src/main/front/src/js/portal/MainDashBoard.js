@@ -1,6 +1,6 @@
 import {useState} from "react";
-import Sidebar from "./commons/Sidebar";
-import Header from "./commons/Header";
+import Sidebar from "./Commons/Sidebar";
+import Header from "./Commons/Header";
 
 /**
  *  작성자 	: 강승현
