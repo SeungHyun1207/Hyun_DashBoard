@@ -1,12 +1,13 @@
 /**
  *  @author 강승현
+ *  작성일 : 2024-03-06
  */
 function Header(){
 
     return(
-        <div className="header">
+        <header className="header">
             <h2>헤더</h2>
-        </div>
+        </header>
     );
 
 }

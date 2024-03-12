@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './css/portal/commons/commons.scss';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import HyunDashBoard from "./App";
+import HyunDashBoard from "./js/templates/Client/Home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

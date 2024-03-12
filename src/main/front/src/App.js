@@ -5,13 +5,13 @@ import Home from "./js/templates/Client/Home";
  *  @작성자 강승현
  *  @작성일
  */
-function HyunDashBoard() {
+//function HyunDashBoard() {
+//
+//  return (
+//    <div className="App">
+//        <Home/>
+//    </div>
+//  );
+//}
 
-  return (
-    <div className="App">
-        <Home/>
-    </div>
-  );
-}
-
-export default HyunDashBoard;
+//export default HyunDashBoard;

@@ -1,1 +1,71 @@
 @charset "UTF-8";
+/* ==================== Color Start ==================== */
+/* ==================== 배경 ==================== */
+.bg-red{
+  background-color:red;
+}
+.bg-skyblue{
+  background-color:skyblue;
+}
+.bg-gray{
+  background-color:gray;
+}
+/* ==================== 글자 색상 ==================== */
+.color-red{
+  color:red !important;
+}
+.color-skyblue{
+  color:skyblue !important;
+}
+.color-gray{
+  color:gray !important;
+}
+/* ==================== Color End ==================== */
+
+/* ==================== Layout Computer Start ==================== */
+body{
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  .main{
+    display: grid;
+    grid-template-areas:
+      "head head head"
+      "side content content"
+      "side foot foot";
+    grid-template-rows: 50px auto 50px;
+    height: 100%;
+    header{
+      grid-area: head;
+      width: 100%;
+      background-color: skyblue;
+    }
+    aside{
+      grid-area: side;
+      background-color: #b171ef;
+    }
+    article{
+      grid-area: content;
+      background-color: #70c55a;
+    }
+    footer{
+      grid-area: foot;
+      background: gray;
+    }
+  }
+}
+/* ==================== Layout Computer End ==================== */
+
+/* ==================== Layout Tablet Start ==================== */
+/* 태블릿 */
+@media screen and (max-width:1023px) {
+
+}
+/* ==================== Layout Tablet End ==================== */
+
+/* ==================== Layout Mobile Start ==================== */
+/* 모바일 */
+@media screen and (max-width:768px) {
+
+}
+/* ==================== Layout Mobile End ==================== */
