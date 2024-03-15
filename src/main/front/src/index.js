@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/portal/commons/commons.scss';
+//import './css/portal/commons/commons.scss';
+import './css/portal/commons/common.css';
 import reportWebVitals from './reportWebVitals';
 import HyunDashBoard from "./js/templates/Client/Home";
 

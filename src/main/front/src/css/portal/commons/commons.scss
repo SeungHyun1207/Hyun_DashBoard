@@ -22,7 +22,25 @@
 }
 /* ==================== Color End ==================== */
 
+/* ==================== Table Start ==================== */
+.table{
+  width: 100%;
+}
+/* ==================== Table End ==================== */
+
+/* ==================== Button Start ==================== */
+.btn{
+  width: 100%;
+}
+/* ==================== Button End ==================== */
+
 /* ==================== Layout Computer Start ==================== */
+a,ul,li{
+  text-decoration: none;
+  list-style: none;
+}
+
+
 body{
   margin: 0 auto;
   position: relative;
@@ -31,26 +49,40 @@ body{
     display: grid;
     grid-template-areas:
       "head head head"
-      "side content content"
-      "side foot foot";
+      "content content content"
+      "foot foot foot";
     grid-template-rows: 50px auto 50px;
     height: 100%;
     header{
       grid-area: head;
       width: 100%;
+      height: 100px;
       background-color: skyblue;
-    }
-    aside{
-      grid-area: side;
-      background-color: #b171ef;
-    }
-    article{
-      grid-area: content;
-      background-color: #70c55a;
-    }
-    footer{
-      grid-area: foot;
-      background: gray;
+      .header-wrap{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .logo-wrap{
+          width: 10%;
+        }
+        .nav-wrap{
+          width: 75%;
+          ul{
+            display: flex;
+            justify-content: space-evenly;
+          }
+        }
+        .login-wrap{
+          width: 15%;
+          .signupandlogin{
+            display: flex;
+            gap: 20px;
+          }
+        }
+      }
     }
   }
 }

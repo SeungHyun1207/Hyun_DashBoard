@@ -5,7 +5,7 @@
 function Sidebar(){
 
     return(
-        <aside className="sidebar-wrap">
+        <aside>
             <div className="sidebar_top">
                 <div className="logo_wrap">
                     <h2>로고</h2>

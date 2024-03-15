@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* ==================== Color Start ==================== */
+/* ==================== 배경 ==================== */
+.bg-red{
+    background-color:red;
+}
+.bg-skyblue{
+    background-color:skyblue;
+}
+.bg-gray{
+    background-color:gray;
+}
+/* ==================== 글자 색상 ==================== */
+.color-red{
+    color:red !important;
+}
+.color-skyblue{
+    color:skyblue !important;
+}
+.color-gray{
+    color:gray !important;
+}
+/* ==================== Color End ==================== */
+
+/* ==================== Table Start ==================== */
+.table{
+    width: 100%;
+}
+/* ==================== Table End ==================== */
+
+/* ==================== Button Start ==================== */
+.btn{
+    width: 100%;
+}
+/* ==================== Button End ==================== */
+
+/* ==================== Layout Computer Start ==================== */
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    height: 100vh;
+}
+/* ==================== Header Start ==================== */
+header{
+    position: relative;
+    background: aquamarine;
+}
+.header-wrap{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-wrap .logo-wrap{
+    width: 10%;
+    background: #61dafb;
+}
+.header-wrap .nav-wrap{
+    width: 80%;
+}
+.header-wrap .nav-wrap ul{
+    display: flex;
+}
+.header-wrap .nav-wrap ul li{
+    list-style: none;
+}
+.header-wrap .nav-wrap ul li{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+.header-wrap .nav-wrap ul li a{
+    color: #30edf4;
+}
+.header-wrap .nav-wrap ul:hover li a:not(:hover) {
+    color: white;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+.header-wrap .login-wrap{
+    width: 10%;
+}
+/* ==================== Header End ==================== */
+/* ==================== Layout Computer End ==================== */
+
+/* ==================== Layout Tablet Start ==================== */
+/* 태블릿 */
+@media screen and (max-width:1023px) {
+
+}
+/* ==================== Layout Tablet End ==================== */
+
+/* ==================== Layout Mobile Start ==================== */
+/* 모바일 */
+@media screen and (max-width:768px) {
+
+}
+/* ==================== Layout Mobile End ==================== */
