@@ -2,13 +2,17 @@
  *  Intro Page
  */
 
-import { Box, Typography } from '@mui/material';
+import { Box, MenuItem, Typography } from '@mui/material';
 
 const IntroPageIndex = () => {
   return (
     <>
       <Box>
-        <Typography>메이플 월드에 오신 것을 환영합니다!</Typography>
+        <Typography>환영합니다.</Typography>
+        <Typography>무엇을 도와드릴까요?</Typography>
+      </Box>
+      <Box>
+        <MenuItem>테스트</MenuItem>
       </Box>
     </>
   );

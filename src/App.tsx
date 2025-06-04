@@ -4,7 +4,6 @@ import { defaultTheme } from './theme/theme';
 import AppErrorBoundary from './views/fallback/AppErrorBoundary';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import CommunityRouter from './views/routers/community/CommunityRouter';
-import ProtectRouter from './views/routers/ProtectRouter';
 import CommonLayout from './views/layouts/CommonLayout';
 import IntroPageIndex from './views/pages/intro/IntroPageIndex';
 

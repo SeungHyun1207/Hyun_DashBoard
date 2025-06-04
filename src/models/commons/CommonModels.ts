@@ -30,7 +30,8 @@ export enum SnackbarTypes {
 export interface CommonRequest {
   url: string;
   params?: URLSearchParams;
-  //   requestBody?: Record<string, any>;
+  headers?: Record<string, string>;
+  requestBody?: Record<string, any>;
   requestFormData?: FormData;
 }
 
